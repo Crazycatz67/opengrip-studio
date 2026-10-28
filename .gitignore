@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+recordings/
+*.local.csv
+docs/testing/runs/
+data/

@@ -1,0 +1,17 @@
+{
+  "name": "opengrip-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpenGrip Studio Recorder: clean, labelled FMG/EMG recordings from an Arduino over Web Serial.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "gate": "node --test \"test/*.test.js\"",
+    "gate:browser": "node tools/browser-gate.mjs",
+    "replay": "node tools/replay.mjs",
+    "serve": "python3 -m http.server 8000",
+    "gate:quick": "node --test \"test/*.test.js\" && GATE_PAGES=engine node tools/browser-gate.mjs",
+    "gate:full": "node tools/gate-full.mjs",
+    "arduino:check": "for s in arduino/*/; do for b in arduino:avr:uno arduino:avr:nano; do arduino-cli compile --fqbn $b --warnings all $s >/dev/null || exit 1; done; done && echo 'arduino: both sketches compile for Uno and Nano'"
+  }
+}

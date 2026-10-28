@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RUNNING</title>
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font: 14px/1.4 system-ui, sans-serif; margin: 1.5rem; }
+    #summary { font-size: 1.4rem; font-weight: 600; }
+    iframe { width: 1440px; height: 800px; border: 1px solid #999; }
+    pre { background: #f4f4f4; padding: 0.75rem; white-space: pre-wrap; max-width: 60rem; }
+  </style>
+</head>
+<body>
+  <h1>OpenGrip Recorder UI walk (mock Arduino and Demo signal, no hardware)</h1>
+  <p>Loads <code>index.html</code> in a frame and walks Start → Preflight → Record with a mock
+    <code>navigator.serial</code> (115200, 9600 for the speed warning, a busy port) and the Demo
+    signal, checking what the screen shows. About 40 s. Run with <code>npm run gate:browser</code>.</p>
+  <p id="summary">Running…</p>
+  <div id="frame-box"></div>
+  <pre id="log"></pre>
+  <script type="module" src="./ui.js"></script>
+</body>
+</html>

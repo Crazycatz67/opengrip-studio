@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RUNNING</title>
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font: 14px/1.4 system-ui, sans-serif; margin: 1.5rem; max-width: 60rem; }
+    #summary { font-size: 1.4rem; font-weight: 600; }
+    .pass { color: #176c2c; } .fail { color: #b00020; }
+    pre { background: #f4f4f4; padding: 0.75rem; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>OpenGrip engine test (mock Arduino, no hardware)</h1>
+  <p>Replays the club fixtures byte by byte through a mock <code>navigator.serial</code>:
+    connect, baud and format detection, guided recording, unplug, reconnect, save to real
+    IndexedDB, recover. Takes about 30 s. Serve the repo root over localhost and open
+    <code>/test/browser/engine.html</code>, or run <code>npm run gate:browser</code>.</p>
+  <p id="summary">Running…</p>
+  <pre id="log"></pre>
+  <script type="module" src="./engine.js"></script>
+</body>
+</html>

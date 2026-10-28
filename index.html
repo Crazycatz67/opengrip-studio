@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OpenGrip Studio Recorder</title>
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./src/ui/style.css">
+</head>
+<body data-mode="simple">
+  <header class="shell">
+    <div class="topbar">
+      <div id="shell-nav">
+        <button id="nav-home" class="btn nav-btn" type="button" aria-label="Home"><span id="brand-mark" aria-hidden="true"></span><span class="nav-w">Home</span></button>
+        <button id="nav-back" class="btn nav-btn" type="button" aria-label="Back"><span aria-hidden="true">←</span><span class="nav-w">Back</span></button>
+      </div>
+      <nav id="steps" aria-label="Session steps"><ol></ol></nav>
+      <span class="spacer"></span>
+      <span id="source-chip" class="chip" hidden></span>
+      <span id="autosave" class="small" hidden></span>
+      <span id="mode-tag" hidden>Advanced</span>
+      <div id="more">
+        <button id="more-btn" class="btn nav-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="more-menu" aria-label="More"><span class="nav-w">More</span><span class="more-wide" aria-hidden="true">▾</span><span class="more-narrow" aria-hidden="true">⋯</span></button>
+        <div id="more-menu" role="menu" aria-label="More" hidden>
+          <p class="m-h" aria-hidden="true">Tools</p>
+          <button id="m-files" type="button" role="menuitem">Saved recordings</button>
+          <button id="m-compare" type="button" role="menuitem">Compare two recordings</button>
+          <button id="m-export" type="button" role="menuitem">Export for AI tools…</button>
+          <button id="m-body" type="button" role="menuitem">Body view</button>
+          <button id="m-glassbox" type="button" role="menuitem">Watch it decide</button>
+          <p class="m-h" aria-hidden="true">Help</p>
+          <button id="keys-btn" type="button" role="menuitem" aria-haspopup="dialog">Keyboard shortcuts <span class="m-k" aria-hidden="true">?</span></button>
+          <p class="m-h" aria-hidden="true">Settings</p>
+          <button id="m-contrast" type="button" role="menuitemcheckbox" aria-checked="false">High contrast <span class="m-k" aria-hidden="true">H</span></button>
+          <button id="m-advanced" type="button" role="menuitemcheckbox" aria-checked="false">Advanced mode</button>
+        </div>
+      </div>
+    </div>
+    <p id="guide" aria-live="polite"><span class="g-ico" aria-hidden="true">➜</span><span class="vh">What do I do now? </span><span id="guide-text"></span><button id="guide-show" class="linkish" type="button">Show me ›</button></p>
+  </header>
+  <main id="app" tabindex="-1"></main>
+  <dialog id="keys-dialog" aria-labelledby="keys-title"></dialog>
+  <input id="file-input" type="file" multiple accept=".txt,.csv,text/plain,text/csv" hidden>
+  <div id="say-polite" class="vh" aria-live="polite"></div>
+  <div id="say-alert" class="vh" role="alert"></div>
+  <script type="importmap">{ "imports": { "three": "./vendor/three/build/three.module.min.js", "three/addons/": "./vendor/three/examples/jsm/" } }</script>
+  <script type="module" src="./src/ui/app.js"></script>
+</body>
+</html>

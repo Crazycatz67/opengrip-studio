@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RUNNING</title>
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../src/ui/style.css">
+  <style>
+    #summary { font-size: 1.4rem; font-weight: 600; margin: 1rem; }
+    .pass { color: var(--good); } .fail { color: var(--bad); }
+    #log { white-space: pre-wrap; margin: 1rem; font: 13px var(--mono); }
+  </style>
+</head>
+<body>
+  <p id="summary">Running…</p>
+  <main id="box"></main>
+  <pre id="log"></pre>
+  <script type="module" src="./body.js"></script>
+</body>
+</html>

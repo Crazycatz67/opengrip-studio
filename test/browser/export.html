@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RUNNING</title>
+  <link rel="icon" href="data:,">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font: 14px/1.4 system-ui, sans-serif; margin: 1.5rem; max-width: 60rem; }
+    #summary { font-size: 1.4rem; font-weight: 600; }
+    .pass { color: #176c2c; } .fail { color: #b00020; }
+    pre { background: #f4f4f4; padding: 0.75rem; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>OpenGrip dataset export test (digital twin, no hardware)</h1>
+  <p>Exports a twin session through the real Export panel and checks the ZIP bytes (CRC, paths,
+    labels, synthetic flag, no names). Takes about 1 s. Run <code>GATE_PAGES=export npm run gate:browser</code>.</p>
+  <div id="panel"></div>
+  <p id="summary">Running…</p>
+  <pre id="log"></pre>
+  <script type="module" src="./export.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+{
+ "tasks": {
+  "grip": {
+   "rest_level": 10,
+   "rest_noise": 1,
+   "peak_mean": 200,
+   "peak_sd": 90,
+   "rise": 20,
+   "decay": 40,
+   "width": 50,
+   "gap": 200,
+   "fade_per_rep": 0.9,
+   "n_bursts": 5
+  },
+  "squeeze": {
+   "rest_level": 4,
+   "rest_noise": 0.7,
+   "peak_mean": 90,
+   "peak_sd": 30,
+   "rise": 20,
+   "decay": 60,
+   "width": 4,
+   "gap": 80,
+   "fade_per_rep": 0.9,
+   "n_bursts": 10,
+   "reps": 5,
+   "hold_len": 200,
+   "rep_gap": 300,
+   "sag_per_s": 0.3,
+   "wobble": 0.3,
+   "wobble_s": 0.3
+  },
+  "finger": {
+   "rest_level": 5,
+   "rest_noise": 0.6,
+   "peak_mean": 40,
+   "peak_sd": 20,
+   "rise": 20,
+   "decay": 40,
+   "width": 20,
+   "gap": 300,
+   "fade_per_rep": 1,
+   "n_bursts": 4
+  },
+  "elbow": {
+   "rest_level": 30,
+   "rest_noise": 6,
+   "peak_mean": 200,
+   "peak_sd": 40,
+   "rise": 20,
+   "decay": 30,
+   "width": 30,
+   "gap": 100,
+   "fade_per_rep": 1,
+   "n_bursts": 10
+  }
+ },
+ "shape": {
+  "settle": 0.5,
+  "settle_s": 8,
+  "release_tail": 0.1,
+  "fast_x": 0.65,
+  "tail_x": 2,
+  "sag_per_s": 0,
+  "wobble": 0.035,
+  "wobble_s": 0.1
+ },
+ "faults": {
+  "dropout_len_median": 30,
+  "dropouts_per_1000": 2,
+  "spike_after_dropout_peak": 1000,
+  "spike_decay": 30
+ }
+}

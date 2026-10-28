@@ -1,0 +1,8 @@
+Copyright (c) 2026 Farhan Amin. All rights reserved.
+
+This code is published so it can be read and reviewed. No licence is granted to copy,
+modify, redistribute or use it, in whole or in part, without the written permission of
+Farhan Amin. (Owner, 2026-10-27: all rights reserved.)
+
+No club data is included or licensed: see DATA.md.
+Vendored three.js and the hand model keep their own MIT licences (vendor/, assets/hand/).
